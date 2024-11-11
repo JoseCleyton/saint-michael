@@ -1,0 +1,56 @@
+<div class="container pt-2 pb-3">
+    <div class="row text-center">
+      <h2 class="color-primary">Retirar valor do Caixa</h2>
+    </div>
+  
+    <form [formGroup]="withdrawalForm">
+      <div class="row">
+        <mat-form-field class="red-placeholder">
+          <mat-label style="color: #c2185b !important">Valor</mat-label>
+          <span matTextPrefix style="margin-right: 1rem; color: #c2185b"
+            >R$ &nbsp;</span
+          >
+          <input
+            type="number"
+            matInput
+            class="red-text"
+            formControlName="value"
+          />
+          <mat-icon matSuffix style="color: #c2185b">attach_money</mat-icon>
+        </mat-form-field>
+      </div>
+  
+      <div class="row">
+        <mat-form-field>
+          <mat-label style="color: #c2185b !important">Origem</mat-label>
+          <mat-select style="color: #c2185b" formControlName="origin">
+            <mat-option value="BUY_MATERIAL">Comprar Material</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+  
+      <div class="row">
+        <mat-form-field>
+          <mat-label style="color: #c2185b !important">Descrição</mat-label>
+          <textarea
+            matInput
+            style="color: #c2185b"
+            formControlName="description"
+          ></textarea>
+        </mat-form-field>
+      </div>
+  
+      <div class="row d-flex justify-content-center">
+        <button
+          [disabled]="!withdrawalForm.valid"
+          color="primary"
+          mat-fab
+          aria-label="Input money in cashier"
+          (click)="withdrawal()"
+        >
+          <mat-icon>arrow_downward</mat-icon>
+        </button>
+      </div>
+    </form>
+  </div>
+  

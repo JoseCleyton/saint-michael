@@ -1,0 +1,12 @@
+::ng-deep {
+  .mat-mdc-tab .mdc-tab__text-label {
+    color: black !important;
+  }
+  .mat-mdc-tab-body-content {
+    overflow: hidden !important;
+  }
+}
+
+.mr-2 {
+  margin-right: 2rem;
+}
